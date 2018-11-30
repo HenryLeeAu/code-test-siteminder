@@ -1,0 +1,1 @@
+export const baseApi = 'http://www.omdbapi.com/?i=tt3896198&apikey=81f5bea7'
