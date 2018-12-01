@@ -2,7 +2,6 @@ import {
   INPUT_KEYWORD,
   GET_LIST,
   SHOW_DETAIL,
-  RECOVER_DETAIL,
   UPDATE_CURRENT_PAGE
 } from "actions/types";
 
@@ -35,16 +34,9 @@ export default function(state = defaultState, action) {
         ...state,
         currentId:action.payload.data.imdbID,
         currentMovieDetail: action.payload.data,
-        visitedMovieDetailList: [
-          ...state.visitedMovieDetailList,
-          action.payload.data
-        ]
+      
       };
-    case RECOVER_DETAIL:
-      return {
-        ...state,
-        currentMovieDetail: action.payload.matchedMovie
-      };
+    
     case UPDATE_CURRENT_PAGE:
       return {
        ...state,

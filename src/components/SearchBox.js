@@ -18,7 +18,6 @@ class SearchBox extends Component {
     this.search()
   };
   search = _.debounce(() => {
-    console.log(this.state.value)
     if(this.state.value.length <= 2) return 
     this.props.fetchMovieList(this.state.value)
   }, 500)

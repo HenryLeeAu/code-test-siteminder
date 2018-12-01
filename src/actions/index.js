@@ -2,23 +2,20 @@ import {
   INPUT_KEYWORD,
   GET_LIST,
   SHOW_DETAIL,
-  RECOVER_DETAIL,
   UPDATE_CURRENT_PAGE
 } from "actions/types";
 import axios from "axios";
 import { baseApi } from "apis";
-//import _ from "lodash";
 export function inputKeyword(keyword) {
   return {
     type: INPUT_KEYWORD,
     payload: keyword
   };
 }
-export const getList = ({ data, fetchPage }) => {
-  console.log(data, fetchPage);
+export const getList = (data) => {
   return {
     type: GET_LIST,
-    payload: { data, fetchPage }
+    payload: data
   };
 };
 export const fetchMovieList = (keyword, page) => {
@@ -45,12 +42,7 @@ export const showMovieDetail = data => {
     payload: data
   };
 };
-export const recoverMovieDetail = data => {
-  return {
-    type: RECOVER_DETAIL,
-    payload: data
-  };
-};
+
 export const fetchMovieDetail = id => {
   return (dispatch, getState) => {
     axios
