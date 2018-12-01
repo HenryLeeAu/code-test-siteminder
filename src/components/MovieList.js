@@ -1,38 +1,37 @@
-import React, { Component } from 'react';
-import MovieListItem from 'components/MovieListItem'
+import React, { Component } from "react";
+import MovieListItem from "components/MovieListItem";
 import { connect } from "react-redux";
 import { fetchMovieDetail } from "actions";
 class MovieList extends Component {
-  handleClickList(id){
-    this.props.fetchMovieDetail(id)
-    
+  handleClickList(id) {
+    this.props.fetchMovieDetail(id);
   }
-  renderList(){
-   return this.props.movieSearch.fetchMovieList.map((movie,index)=>{
-      return <li key={`${movie.imdbID}${movie.Title}`} 
-                onClick={(e)=>this.handleClickList(movie.imdbID)}>{movie.Title} {movie.Year}</li>
-    })
+  renderList() {
+    return this.props.searchStatus.currentMovieList.map((movie, index) => {
+      return (
+        <MovieListItem 
+          key={`${movie.imdbID}${movie.Title}`}
+          onClick={e => this.handleClickList(movie.imdbID)}
+          title={movie.Title} year = {movie.Year}
+          clicked = {movie.imdbID === this.props.searchStatus.currentId}
+
+        />
+      );
+    });
   }
 
-  componentDidUpdate(){
-    //console.log(this.props.movieSearch.fetchMovieList)
-  }
+  componentDidUpdate() {}
   render() {
-    return (
-      <ul className="movieList">
-        {this.renderList()}
-      </ul>
-    );
+    return <ul className="movieList">{this.renderList()}</ul>;
   }
 }
 function mapStateToProps(state) {
   return {
-    movieSearch: state.movieSearch
+    searchStatus: state.searchStatus
   };
 }
 
 export default connect(
-  mapStateToProps,{fetchMovieDetail}
+  mapStateToProps,
+  { fetchMovieDetail }
 )(MovieList);
-
-

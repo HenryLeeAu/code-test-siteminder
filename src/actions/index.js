@@ -1,84 +1,88 @@
-import { INPUT_KEYWORD,GET_LIST,SHOW_DETAIL,RECOVER_DETAIL } from 'actions/types'
-import axios from 'axios'
-import { baseApi } from 'api'
-import _ from 'lodash'
-export function inputKeyword(keyword){
+import {
+  INPUT_KEYWORD,
+  GET_LIST,
+  SHOW_DETAIL,
+  RECOVER_DETAIL,
+  UPDATE_CURRENT_PAGE
+} from "actions/types";
+import axios from "axios";
+import { baseApi } from "apis";
+//import _ from "lodash";
+export function inputKeyword(keyword) {
   return {
-    type:INPUT_KEYWORD,
-    payload :keyword
-  }
+    type: INPUT_KEYWORD,
+    payload: keyword
+  };
 }
-export const getList = data =>{
+export const getList = ({ data, fetchPage }) => {
+  console.log(data, fetchPage);
   return {
-    type:GET_LIST,
-    payload :data
-  }
-}
-export const fetchMovieList = keyword => {
-
-  return dispatch => {
-    axios.get(`http://www.omdbapi.com/?&apikey=81f5bea7&s=flash`)
-      .then(res => res.data)
-      .then(data => {
-     
-        dispatch(getList({data}))
-        //dispatch(getTheme({ color: data.color }));
-      })
-      .catch(error => {
-       // console.log('This client is not exist');
-      });
+    type: GET_LIST,
+    payload: { data, fetchPage }
   };
 };
-export const showMovieDetail = data =>{
-  return {
-    type:SHOW_DETAIL,
-    payload :data
-   
-  }
-}
-export const recoverMovieDetail = data =>{
-  return {
-    type:RECOVER_DETAIL,
-    payload :data
-   
-  }
-}
-export const fetchMovieDetail = id =>{
-  return (dispatch,getState) => {
-    const fetchedMovies = getState().movieSearch.fetchedMovies
-    const matchedMovie = _.find(fetchedMovies , function(o) {
-      return o.imdbID == id 
-    });
+export const fetchMovieList = (keyword, page) => {
+  const fetchPage = typeof page === "number" && page > 0 ? page : 1;
 
-    if(matchedMovie){
-      dispatch(recoverMovieDetail({matchedMovie}))
-      return false
-    }
-  
-    axios.get(`http://www.omdbapi.com/?&apikey=81f5bea7&i=${id}`)
+  return dispatch => {
+    axios
+      .get(`${baseApi}&s=${keyword}&page=${fetchPage}`)
       .then(res => res.data)
       .then(data => {
-        dispatch(showMovieDetail({data}))
-      
+        //handle response err msg
+        if (data.Response === "False") {
+          console.log(data.Error);
+        } else {
+          dispatch(getList({ data, fetchPage }));
+        }
+      })
+      .catch(error => {});
+  };
+};
+export const showMovieDetail = data => {
+  return {
+    type: SHOW_DETAIL,
+    payload: data
+  };
+};
+export const recoverMovieDetail = data => {
+  return {
+    type: RECOVER_DETAIL,
+    payload: data
+  };
+};
+export const fetchMovieDetail = id => {
+  return (dispatch, getState) => {
+    axios
+      .get(`${baseApi}&i=${id}`)
+      .then(res => res.data)
+      .then(data => {
+        dispatch(showMovieDetail({ data }));
       })
       .catch(error => {
         //console.log('This client is not exist');
       });
   };
-}
-
-/*
-export function fetchComments(){
-  const response =axios.get('http://jsonplaceholder.typicode.com/comments')
+};
+export const updateCurrentPageNum = num => {
   return {
-    type: FETCH_COMMENTS,
-    payload: response
-  }
-}
-export function changeAuth(isLoggedIn){
-  return {
-    type: CHANGE_AUTH,
-    payload: isLoggedIn
-  }
+    type: UPDATE_CURRENT_PAGE,
+    payload: num
+  };
+};
+export const increaseCurrentPage = () => {
+  return (dispatch, getState) => {
+    const { currentPage, totalPages, keyword } = getState().searchStatus;
+    if (currentPage >= totalPages) return false;
 
-}*/
+    dispatch(fetchMovieList(keyword, currentPage + 1));
+  };
+};
+
+export const decreaseCurrentPage = () => {
+  return (dispatch, getState) => {
+    const { currentPage, keyword } = getState().searchStatus;
+    if (currentPage <= 1) return false;
+    dispatch(fetchMovieList(keyword, currentPage - 1));
+  };
+};

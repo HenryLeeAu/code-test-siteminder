@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
+import _ from "lodash";
 class SearchBox extends Component {
   state = {
     value: ""
@@ -10,11 +11,17 @@ class SearchBox extends Component {
     this.setState({
       value: e.target.value
     },()=>{
-      this.props.fetchMovieList(this.state.value);
+      
+      
     });
     this.props.inputKeyword(e.target.value);
-    
+    this.search()
   };
+  search = _.debounce(() => {
+    console.log(this.state.value)
+    if(this.state.value.length <= 2) return 
+    this.props.fetchMovieList(this.state.value)
+  }, 500)
   render() {
     return (
       <div className="SearchBox">
@@ -29,7 +36,7 @@ class SearchBox extends Component {
 }
 function mapStateToProps(state) {
   return {
-    movieSearch: state.movieSearch
+    searchStatus: state.searchStatus
   };
 }
 export default connect(
