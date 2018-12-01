@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList render 2 movies 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentMovieList": Array [
+          Object {
+            "Title": "Marvel",
+            "Year": "2016",
+            "imdbID": "id1",
+          },
+          Object {
+            "Title": "Spider man",
+            "Year": "2016",
+            "imdbID": "id2",
+          },
+        ],
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(MovieList)>
+      <MovieList
+        fetchMovieDetail={[Function]}
+        searchStatus={
+          Object {
+            "currentMovieList": Array [
+              Object {
+                "Title": "Marvel",
+                "Year": "2016",
+                "imdbID": "id1",
+              },
+              Object {
+                "Title": "Spider man",
+                "Year": "2016",
+                "imdbID": "id2",
+              },
+            ],
+          }
+        }
+      >
+        <ul
+          className="movieList"
+        >
+          <_default
+            clicked={false}
+            key="id1Marvel"
+            onClick={[Function]}
+            title="Marvel"
+            year="2016"
+          >
+            <li
+              className=""
+              name="1"
+              onClick={[Function]}
+            >
+              <div>
+                Marvel
+              </div>
+              <div
+                className="align-right"
+              >
+                2016
+              </div>
+            </li>
+          </_default>
+          <_default
+            clicked={false}
+            key="id2Spider man"
+            onClick={[Function]}
+            title="Spider man"
+            year="2016"
+          >
+            <li
+              className=""
+              name="1"
+              onClick={[Function]}
+            >
+              <div>
+                Spider man
+              </div>
+              <div
+                className="align-right"
+              >
+                2016
+              </div>
+            </li>
+          </_default>
+        </ul>
+      </MovieList>
+    </Connect(MovieList)>
+  </Provider>
+</_default>
+`;

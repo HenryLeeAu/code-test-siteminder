@@ -19,8 +19,6 @@ class MovieList extends Component {
       );
     });
   }
-
-  componentDidUpdate() {}
   render() {
     return <ul className="movieList">{this.renderList()}</ul>;
   }

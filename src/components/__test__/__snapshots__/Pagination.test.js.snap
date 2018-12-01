@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination less than 1 page 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(Pagination)
+      initialState={
+        Object {
+          "searchStatus": Object {
+            "currentPage": null,
+            "totalNum": null,
+            "totalPages": null,
+          },
+        }
+      }
+    >
+      <Pagination
+        decreaseCurrentPage={[Function]}
+        increaseCurrentPage={[Function]}
+        initialState={
+          Object {
+            "searchStatus": Object {
+              "currentPage": null,
+              "totalNum": null,
+              "totalPages": null,
+            },
+          }
+        }
+        searchStatus={
+          Object {
+            "currentId": null,
+            "currentMovieDetail": null,
+            "currentMovieList": Array [],
+            "currentPage": null,
+            "keyword": "",
+            "totalNum": null,
+            "totalPages": null,
+            "visitedMovieDetailList": Array [],
+          }
+        }
+      />
+    </Connect(Pagination)>
+  </Provider>
+</_default>
+`;
+
+exports[`Pagination more than 1 pages 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentPage": 1,
+        "totalNum": 40,
+        "totalPages": 4,
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(Pagination)>
+      <Pagination
+        decreaseCurrentPage={[Function]}
+        increaseCurrentPage={[Function]}
+        searchStatus={
+          Object {
+            "currentPage": 1,
+            "totalNum": 40,
+            "totalPages": 4,
+          }
+        }
+      >
+        <div
+          className="pagination"
+        >
+          <div
+            className="left"
+          >
+            <button
+              id="dec"
+              onClick={[Function]}
+            >
+              prev
+            </button>
+          </div>
+          <div
+            className="middle"
+          >
+            <div>
+                
+              1
+               / 
+              4
+               pages
+            </div>
+            40
+             total
+          </div>
+          <div
+            className="right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              next
+            </button>
+          </div>
+        </div>
+      </Pagination>
+    </Connect(Pagination)>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movieDetail initial screen 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentMovieDetail": null,
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(MovieDetail)>
+      <MovieDetail
+        dispatch={[Function]}
+        searchStatus={
+          Object {
+            "currentMovieDetail": null,
+          }
+        }
+      >
+        <div>
+          Please search from left side
+        </div>
+      </MovieDetail>
+    </Connect(MovieDetail)>
+  </Provider>
+</_default>
+`;
+
+exports[`movieDetail no poster 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentMovieDetail": Object {
+          "Poster": "N/A",
+        },
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(MovieDetail)>
+      <MovieDetail
+        dispatch={[Function]}
+        searchStatus={
+          Object {
+            "currentMovieDetail": Object {
+              "Poster": "N/A",
+            },
+          }
+        }
+      >
+        <div>
+          <div
+            className="detailLeft"
+          >
+            <div />
+            <div>
+              genere: 
+            </div>
+            <p>
+              movie description
+            </p>
+            <div>
+              language: 
+            </div>
+            <div>
+              Director: 
+            </div>
+            <div>
+              Actors: 
+            </div>
+            <div>
+              Duration : 
+            </div>
+          </div>
+        </div>
+      </MovieDetail>
+    </Connect(MovieDetail)>
+  </Provider>
+</_default>
+`;
+
+exports[`movieDetail with detail 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentMovieDetail": Object {
+          "Actors": "Actor1, Actor2, Actor3",
+          "Director": "Henry Lee",
+          "Genre": "Comedy, Horrible",
+          "Language": "English",
+          "Poster": "abc.jpg",
+          "Runtime": "45mins",
+          "Title": "Marvel",
+        },
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(MovieDetail)>
+      <MovieDetail
+        dispatch={[Function]}
+        searchStatus={
+          Object {
+            "currentMovieDetail": Object {
+              "Actors": "Actor1, Actor2, Actor3",
+              "Director": "Henry Lee",
+              "Genre": "Comedy, Horrible",
+              "Language": "English",
+              "Poster": "abc.jpg",
+              "Runtime": "45mins",
+              "Title": "Marvel",
+            },
+          }
+        }
+      >
+        <div>
+          <div
+            className="detailLeft"
+          >
+            <div>
+              Marvel
+            </div>
+            <div>
+              genere: 
+              Comedy, Horrible
+            </div>
+            <p>
+              movie description
+            </p>
+            <div>
+              language: 
+              English
+            </div>
+            <div>
+              Director: 
+              Henry Lee
+            </div>
+            <div>
+              Actors: 
+              Actor1, Actor2, Actor3
+            </div>
+            <div>
+              Duration : 
+              45mins
+            </div>
+          </div>
+          <img
+            alt="Marvel"
+            src="abc.jpg"
+          />
+        </div>
+      </MovieDetail>
+    </Connect(MovieDetail)>
+  </Provider>
+</_default>
+`;

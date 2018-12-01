@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbox render each component 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(SearchBox)
+      fetchMovieList={[MockFunction]}
+    >
+      <SearchBox
+        decreaseCurrentPage={[Function]}
+        fetchMovieDetail={[Function]}
+        fetchMovieList={[Function]}
+        getList={[Function]}
+        increaseCurrentPage={[Function]}
+        inputKeyword={[Function]}
+        recoverMovieDetail={[Function]}
+        searchStatus={
+          Object {
+            "currentId": null,
+            "currentMovieDetail": null,
+            "currentMovieList": Array [],
+            "currentPage": null,
+            "keyword": "",
+            "totalNum": null,
+            "totalPages": null,
+            "visitedMovieDetailList": Array [],
+          }
+        }
+        showMovieDetail={[Function]}
+        updateCurrentPageNum={[Function]}
+      >
+        <div
+          className="SearchBox"
+        >
+          <input
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+      </SearchBox>
+    </Connect(SearchBox)>
+  </Provider>
+</_default>
+`;

@@ -7,18 +7,20 @@ class Pagination extends Component {
   }
   handleClickDecreasment=(e)=>{
     this.props.decreaseCurrentPage()
+   
   }
   handleClickIncreasment=(e)=>{
     this.props.increaseCurrentPage()
-
+    
   }
+  
   renderPagination(){
     const { currentPage, totalPages,totalNum } = this.props.searchStatus;
     if(totalPages!==null && totalPages>1 ){
       return (
         <div className="pagination">
         <div className="left">
-          <button onClick= { this.handleClickDecreasment}>prev</button>
+          <button id="dec" onClick= { this.handleClickDecreasment}>prev</button>
         </div>
         <div className="middle">
           <div>  {currentPage} / {totalPages} pages</div>

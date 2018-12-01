@@ -9,8 +9,8 @@ import {
 const defaultState = {
   keyword: "",
   currentPage: null,
-  totalPages: "",
-  totalNum: "",
+  totalPages: null,
+  totalNum: null,
   currentId:null,
   currentMovieList: [],
   currentMovieDetail: null,
