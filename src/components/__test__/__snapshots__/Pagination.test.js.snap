@@ -45,7 +45,6 @@ exports[`Pagination less than 1 page 1`] = `
             "keyword": "",
             "totalNum": null,
             "totalPages": null,
-            "visitedMovieDetailList": Array [],
           }
         }
       />
@@ -94,19 +93,11 @@ exports[`Pagination more than 1 pages 1`] = `
         >
           <div
             className="left"
-          >
-            <button
-              id="dec"
-              onClick={[Function]}
-            >
-              prev
-            </button>
-          </div>
+          />
           <div
             className="middle"
           >
             <div>
-                
               1
                / 
               4

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovieList render 2 movies 1`] = `
+exports[`MovieList render UI 1`] = `
 <_default
   initialState={
     Object {

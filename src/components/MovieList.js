@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import MovieListItem from "components/MovieListItem";
-import { connect } from "react-redux";
-import { fetchMovieDetail } from "actions";
+import React, { Component } from 'react';
+import MovieListItem from 'components/MovieListItem';
+import { connect } from 'react-redux';
+import { fetchMovieDetail } from 'actions';
 class MovieList extends Component {
   handleClickList(id) {
     this.props.fetchMovieDetail(id);
@@ -9,12 +9,12 @@ class MovieList extends Component {
   renderList() {
     return this.props.searchStatus.currentMovieList.map((movie, index) => {
       return (
-        <MovieListItem 
+        <MovieListItem
           key={`${movie.imdbID}${movie.Title}`}
           onClick={e => this.handleClickList(movie.imdbID)}
-          title={movie.Title} year = {movie.Year}
-          clicked = {movie.imdbID === this.props.searchStatus.currentId}
-
+          title={movie.Title}
+          year={movie.Year}
+          clicked={movie.imdbID === this.props.searchStatus.currentId}
         />
       );
     });
@@ -25,7 +25,7 @@ class MovieList extends Component {
 }
 function mapStateToProps(state) {
   return {
-    searchStatus: state.searchStatus
+    searchStatus: state.searchStatus,
   };
 }
 

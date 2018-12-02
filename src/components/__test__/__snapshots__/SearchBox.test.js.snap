@@ -23,7 +23,6 @@ exports[`Searchbox render each component 1`] = `
         getList={[Function]}
         increaseCurrentPage={[Function]}
         inputKeyword={[Function]}
-        recoverMovieDetail={[Function]}
         searchStatus={
           Object {
             "currentId": null,
@@ -33,7 +32,6 @@ exports[`Searchbox render each component 1`] = `
             "keyword": "",
             "totalNum": null,
             "totalPages": null,
-            "visitedMovieDetailList": Array [],
           }
         }
         showMovieDetail={[Function]}
@@ -44,6 +42,7 @@ exports[`Searchbox render each component 1`] = `
         >
           <input
             onChange={[Function]}
+            placeholder="keyword"
             type="text"
             value=""
           />

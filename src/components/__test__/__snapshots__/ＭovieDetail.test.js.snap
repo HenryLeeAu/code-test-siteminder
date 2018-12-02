@@ -30,8 +30,10 @@ exports[`movieDetail initial screen 1`] = `
           }
         }
       >
-        <div>
-          Please search from left side
+        <div
+          className="before-select"
+        >
+          You haven't selected any movie yet!
         </div>
       </MovieDetail>
     </Connect(MovieDetail)>
@@ -77,7 +79,15 @@ exports[`movieDetail no poster 1`] = `
           <div
             className="detailLeft"
           >
-            <div />
+            <h2
+              className="movie-title"
+            />
+            <div
+              className="movie-year"
+            />
+            <p
+              className="movie-desc"
+            />
             <div>
               genere: 
             </div>
@@ -91,7 +101,7 @@ exports[`movieDetail no poster 1`] = `
               Director: 
             </div>
             <div>
-              Actors: 
+              Actor(s): 
             </div>
             <div>
               Duration : 
@@ -154,9 +164,17 @@ exports[`movieDetail with detail 1`] = `
           <div
             className="detailLeft"
           >
-            <div>
+            <h2
+              className="movie-title"
+            >
               Marvel
-            </div>
+            </h2>
+            <div
+              className="movie-year"
+            />
+            <p
+              className="movie-desc"
+            />
             <div>
               genere: 
               Comedy, Horrible
@@ -173,7 +191,7 @@ exports[`movieDetail with detail 1`] = `
               Henry Lee
             </div>
             <div>
-              Actors: 
+              Actor(s): 
               Actor1, Actor2, Actor3
             </div>
             <div>

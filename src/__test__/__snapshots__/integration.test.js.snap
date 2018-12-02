@@ -1,0 +1,762 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intergation click move to show detail 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentId": null,
+        "currentMovieDetail": null,
+        "currentMovieList": Array [
+          Object {
+            "Title": "Marvel",
+            "Year": "2016",
+            "imdbID": "tt2247732",
+          },
+        ],
+        "currentPage": "1",
+        "keyword": "marvel",
+        "totalPages": "1",
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <App>
+      <div
+        className="App"
+      >
+        <div
+          className="sidebar"
+        >
+          <Connect(SearchBox)>
+            <SearchBox
+              decreaseCurrentPage={[Function]}
+              fetchMovieDetail={[Function]}
+              fetchMovieList={[Function]}
+              getList={[Function]}
+              increaseCurrentPage={[Function]}
+              inputKeyword={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+              showMovieDetail={[Function]}
+              updateCurrentPageNum={[Function]}
+            >
+              <div
+                className="SearchBox"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="keyword"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </SearchBox>
+          </Connect(SearchBox)>
+          <div
+            className="movieListWrap"
+          >
+            <Connect(MovieList)>
+              <MovieList
+                fetchMovieDetail={[Function]}
+                searchStatus={
+                  Object {
+                    "currentId": null,
+                    "currentMovieDetail": null,
+                    "currentMovieList": Array [
+                      Object {
+                        "Title": "Marvel",
+                        "Year": "2016",
+                        "imdbID": "tt2247732",
+                      },
+                    ],
+                    "currentPage": "1",
+                    "keyword": "marvel",
+                    "totalPages": "1",
+                  }
+                }
+              >
+                <ul
+                  className="movieList"
+                >
+                  <_default
+                    clicked={false}
+                    key="tt2247732Marvel"
+                    onClick={[Function]}
+                    title="Marvel"
+                    year="2016"
+                  >
+                    <li
+                      className=""
+                      name="1"
+                      onClick={[Function]}
+                    >
+                      <div>
+                        Marvel
+                      </div>
+                      <div
+                        className="align-right"
+                      >
+                        2016
+                      </div>
+                    </li>
+                  </_default>
+                </ul>
+              </MovieList>
+            </Connect(MovieList)>
+          </div>
+          <Connect(Pagination)>
+            <Pagination
+              decreaseCurrentPage={[Function]}
+              increaseCurrentPage={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+            />
+          </Connect(Pagination)>
+        </div>
+        <div
+          className="detail"
+        >
+          <Connect(MovieDetail)>
+            <MovieDetail
+              dispatch={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+            >
+              <div
+                className="before-select"
+              >
+                You haven't selected any movie yet!
+              </div>
+            </MovieDetail>
+          </Connect(MovieDetail)>
+        </div>
+      </div>
+    </App>
+  </Provider>
+</_default>
+`;
+
+exports[`Intergation click move to show detail 2`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentId": null,
+        "currentMovieDetail": null,
+        "currentMovieList": Array [
+          Object {
+            "Title": "Marvel",
+            "Year": "2016",
+            "imdbID": "tt2247732",
+          },
+        ],
+        "currentPage": "1",
+        "keyword": "marvel",
+        "totalPages": "1",
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <App>
+      <div
+        className="App"
+      >
+        <div
+          className="sidebar"
+        >
+          <Connect(SearchBox)>
+            <SearchBox
+              decreaseCurrentPage={[Function]}
+              fetchMovieDetail={[Function]}
+              fetchMovieList={[Function]}
+              getList={[Function]}
+              increaseCurrentPage={[Function]}
+              inputKeyword={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": "tt0055691",
+                  "currentMovieDetail": Object {
+                    "Actors": "Merv Griffin",
+                    "Awards": "Nominated for 1 Golden Globe. Another 11 wins & 19 nominations.",
+                    "Country": "USA",
+                    "Director": "N/A",
+                    "Genre": "Comedy, Family, Music",
+                    "Language": "English",
+                    "Metascore": "N/A",
+                    "Plot": "Merv Griffin invites a series of actors, actresses, writers, and directors to discuss the progressive work they have done and current culture, arts, and entertainment surrounding the numerous projects.",
+                    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NjcyMjI5N15BMl5BanBnXkFtZTcwODgyNjMzMQ@@._V1_SX300.jpg",
+                    "Rated": "N/A",
+                    "Ratings": Array [
+                      Object {
+                        "Source": "Internet Movie Database",
+                        "Value": "6.7/10",
+                      },
+                    ],
+                    "Released": "01 Oct 1962",
+                    "Response": "True",
+                    "Runtime": "60 min",
+                    "Title": "The Merv Griffin Show",
+                    "Type": "series",
+                    "Writer": "N/A",
+                    "Year": "1962–1986",
+                    "imdbID": "tt0055691",
+                    "imdbRating": "6.7",
+                    "imdbVotes": "302",
+                    "totalSeasons": "18",
+                  },
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+              showMovieDetail={[Function]}
+              updateCurrentPageNum={[Function]}
+            >
+              <div
+                className="SearchBox"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="keyword"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </SearchBox>
+          </Connect(SearchBox)>
+          <div
+            className="movieListWrap"
+          >
+            <Connect(MovieList)>
+              <MovieList
+                fetchMovieDetail={[Function]}
+                searchStatus={
+                  Object {
+                    "currentId": "tt0055691",
+                    "currentMovieDetail": Object {
+                      "Actors": "Merv Griffin",
+                      "Awards": "Nominated for 1 Golden Globe. Another 11 wins & 19 nominations.",
+                      "Country": "USA",
+                      "Director": "N/A",
+                      "Genre": "Comedy, Family, Music",
+                      "Language": "English",
+                      "Metascore": "N/A",
+                      "Plot": "Merv Griffin invites a series of actors, actresses, writers, and directors to discuss the progressive work they have done and current culture, arts, and entertainment surrounding the numerous projects.",
+                      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NjcyMjI5N15BMl5BanBnXkFtZTcwODgyNjMzMQ@@._V1_SX300.jpg",
+                      "Rated": "N/A",
+                      "Ratings": Array [
+                        Object {
+                          "Source": "Internet Movie Database",
+                          "Value": "6.7/10",
+                        },
+                      ],
+                      "Released": "01 Oct 1962",
+                      "Response": "True",
+                      "Runtime": "60 min",
+                      "Title": "The Merv Griffin Show",
+                      "Type": "series",
+                      "Writer": "N/A",
+                      "Year": "1962–1986",
+                      "imdbID": "tt0055691",
+                      "imdbRating": "6.7",
+                      "imdbVotes": "302",
+                      "totalSeasons": "18",
+                    },
+                    "currentMovieList": Array [
+                      Object {
+                        "Title": "Marvel",
+                        "Year": "2016",
+                        "imdbID": "tt2247732",
+                      },
+                    ],
+                    "currentPage": "1",
+                    "keyword": "marvel",
+                    "totalPages": "1",
+                  }
+                }
+              >
+                <ul
+                  className="movieList"
+                >
+                  <_default
+                    clicked={false}
+                    key="tt2247732Marvel"
+                    onClick={[Function]}
+                    title="Marvel"
+                    year="2016"
+                  >
+                    <li
+                      className=""
+                      name="1"
+                      onClick={[Function]}
+                    >
+                      <div>
+                        Marvel
+                      </div>
+                      <div
+                        className="align-right"
+                      >
+                        2016
+                      </div>
+                    </li>
+                  </_default>
+                </ul>
+              </MovieList>
+            </Connect(MovieList)>
+          </div>
+          <Connect(Pagination)>
+            <Pagination
+              decreaseCurrentPage={[Function]}
+              increaseCurrentPage={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": "tt0055691",
+                  "currentMovieDetail": Object {
+                    "Actors": "Merv Griffin",
+                    "Awards": "Nominated for 1 Golden Globe. Another 11 wins & 19 nominations.",
+                    "Country": "USA",
+                    "Director": "N/A",
+                    "Genre": "Comedy, Family, Music",
+                    "Language": "English",
+                    "Metascore": "N/A",
+                    "Plot": "Merv Griffin invites a series of actors, actresses, writers, and directors to discuss the progressive work they have done and current culture, arts, and entertainment surrounding the numerous projects.",
+                    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NjcyMjI5N15BMl5BanBnXkFtZTcwODgyNjMzMQ@@._V1_SX300.jpg",
+                    "Rated": "N/A",
+                    "Ratings": Array [
+                      Object {
+                        "Source": "Internet Movie Database",
+                        "Value": "6.7/10",
+                      },
+                    ],
+                    "Released": "01 Oct 1962",
+                    "Response": "True",
+                    "Runtime": "60 min",
+                    "Title": "The Merv Griffin Show",
+                    "Type": "series",
+                    "Writer": "N/A",
+                    "Year": "1962–1986",
+                    "imdbID": "tt0055691",
+                    "imdbRating": "6.7",
+                    "imdbVotes": "302",
+                    "totalSeasons": "18",
+                  },
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+            />
+          </Connect(Pagination)>
+        </div>
+        <div
+          className="detail"
+        >
+          <Connect(MovieDetail)>
+            <MovieDetail
+              dispatch={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": "tt0055691",
+                  "currentMovieDetail": Object {
+                    "Actors": "Merv Griffin",
+                    "Awards": "Nominated for 1 Golden Globe. Another 11 wins & 19 nominations.",
+                    "Country": "USA",
+                    "Director": "N/A",
+                    "Genre": "Comedy, Family, Music",
+                    "Language": "English",
+                    "Metascore": "N/A",
+                    "Plot": "Merv Griffin invites a series of actors, actresses, writers, and directors to discuss the progressive work they have done and current culture, arts, and entertainment surrounding the numerous projects.",
+                    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NjcyMjI5N15BMl5BanBnXkFtZTcwODgyNjMzMQ@@._V1_SX300.jpg",
+                    "Rated": "N/A",
+                    "Ratings": Array [
+                      Object {
+                        "Source": "Internet Movie Database",
+                        "Value": "6.7/10",
+                      },
+                    ],
+                    "Released": "01 Oct 1962",
+                    "Response": "True",
+                    "Runtime": "60 min",
+                    "Title": "The Merv Griffin Show",
+                    "Type": "series",
+                    "Writer": "N/A",
+                    "Year": "1962–1986",
+                    "imdbID": "tt0055691",
+                    "imdbRating": "6.7",
+                    "imdbVotes": "302",
+                    "totalSeasons": "18",
+                  },
+                  "currentMovieList": Array [
+                    Object {
+                      "Title": "Marvel",
+                      "Year": "2016",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": "1",
+                  "keyword": "marvel",
+                  "totalPages": "1",
+                }
+              }
+            >
+              <div>
+                <div
+                  className="detailLeft"
+                >
+                  <h2
+                    className="movie-title"
+                  >
+                    The Merv Griffin Show
+                  </h2>
+                  <div
+                    className="movie-year"
+                  >
+                    1962–1986
+                  </div>
+                  <p
+                    className="movie-desc"
+                  >
+                    Merv Griffin invites a series of actors, actresses, writers, and directors to discuss the progressive work they have done and current culture, arts, and entertainment surrounding the numerous projects.
+                  </p>
+                  <div>
+                    genere: 
+                    Comedy, Family, Music
+                  </div>
+                  <p>
+                    movie description
+                  </p>
+                  <div>
+                    language: 
+                    English
+                  </div>
+                  <div>
+                    Director: 
+                    N/A
+                  </div>
+                  <div>
+                    Actor(s): 
+                    Merv Griffin
+                  </div>
+                  <div>
+                    Duration : 
+                    60 min
+                  </div>
+                </div>
+                <img
+                  alt="The Merv Griffin Show"
+                  src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NjcyMjI5N15BMl5BanBnXkFtZTcwODgyNjMzMQ@@._V1_SX300.jpg"
+                />
+              </div>
+            </MovieDetail>
+          </Connect(MovieDetail)>
+        </div>
+      </div>
+    </App>
+  </Provider>
+</_default>
+`;
+
+exports[`Intergation keyin to search list 1`] = `
+<_default
+  initialState={
+    Object {
+      "searchStatus": Object {
+        "currentId": null,
+        "currentMovieDetail": null,
+        "currentMovieList": Array [],
+        "currentPage": null,
+        "keyword": "",
+        "totalNum": null,
+        "totalPages": null,
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <App>
+      <div
+        className="App"
+      >
+        <div
+          className="sidebar"
+        >
+          <Connect(SearchBox)>
+            <SearchBox
+              decreaseCurrentPage={[Function]}
+              fetchMovieDetail={[Function]}
+              fetchMovieList={[Function]}
+              getList={[Function]}
+              increaseCurrentPage={[Function]}
+              inputKeyword={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Poster": "https://m.media-amazon.com/images/M/MV5BMTM2MzY1ODcyN15BMl5BanBnXkFtZTcwNTE3OTIxOA@@._V1_SX300.jpg",
+                      "Title": "Marvel One-Shot: Item 47",
+                      "Type": "movie",
+                      "Year": "2012",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": 1,
+                  "keyword": "marvel",
+                  "totalNum": "143",
+                  "totalPages": 15,
+                }
+              }
+              showMovieDetail={[Function]}
+              updateCurrentPageNum={[Function]}
+            >
+              <div
+                className="SearchBox"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="keyword"
+                  type="text"
+                  value="marvel"
+                />
+              </div>
+            </SearchBox>
+          </Connect(SearchBox)>
+          <div
+            className="movieListWrap"
+          >
+            <Connect(MovieList)>
+              <MovieList
+                fetchMovieDetail={[Function]}
+                searchStatus={
+                  Object {
+                    "currentId": null,
+                    "currentMovieDetail": null,
+                    "currentMovieList": Array [
+                      Object {
+                        "Poster": "https://m.media-amazon.com/images/M/MV5BMTM2MzY1ODcyN15BMl5BanBnXkFtZTcwNTE3OTIxOA@@._V1_SX300.jpg",
+                        "Title": "Marvel One-Shot: Item 47",
+                        "Type": "movie",
+                        "Year": "2012",
+                        "imdbID": "tt2247732",
+                      },
+                    ],
+                    "currentPage": 1,
+                    "keyword": "marvel",
+                    "totalNum": "143",
+                    "totalPages": 15,
+                  }
+                }
+              >
+                <ul
+                  className="movieList"
+                >
+                  <_default
+                    clicked={false}
+                    key="tt2247732Marvel One-Shot: Item 47"
+                    onClick={[Function]}
+                    title="Marvel One-Shot: Item 47"
+                    year="2012"
+                  >
+                    <li
+                      className=""
+                      name="1"
+                      onClick={[Function]}
+                    >
+                      <div>
+                        Marvel One-Shot: Item 47
+                      </div>
+                      <div
+                        className="align-right"
+                      >
+                        2012
+                      </div>
+                    </li>
+                  </_default>
+                </ul>
+              </MovieList>
+            </Connect(MovieList)>
+          </div>
+          <Connect(Pagination)>
+            <Pagination
+              decreaseCurrentPage={[Function]}
+              increaseCurrentPage={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Poster": "https://m.media-amazon.com/images/M/MV5BMTM2MzY1ODcyN15BMl5BanBnXkFtZTcwNTE3OTIxOA@@._V1_SX300.jpg",
+                      "Title": "Marvel One-Shot: Item 47",
+                      "Type": "movie",
+                      "Year": "2012",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": 1,
+                  "keyword": "marvel",
+                  "totalNum": "143",
+                  "totalPages": 15,
+                }
+              }
+            >
+              <div
+                className="pagination"
+              >
+                <div
+                  className="left"
+                />
+                <div
+                  className="middle"
+                >
+                  <div>
+                    1
+                     / 
+                    15
+                     pages
+                  </div>
+                  143
+                   total
+                </div>
+                <div
+                  className="right"
+                >
+                  <button
+                    onClick={[Function]}
+                  >
+                    next
+                  </button>
+                </div>
+              </div>
+            </Pagination>
+          </Connect(Pagination)>
+        </div>
+        <div
+          className="detail"
+        >
+          <Connect(MovieDetail)>
+            <MovieDetail
+              dispatch={[Function]}
+              searchStatus={
+                Object {
+                  "currentId": null,
+                  "currentMovieDetail": null,
+                  "currentMovieList": Array [
+                    Object {
+                      "Poster": "https://m.media-amazon.com/images/M/MV5BMTM2MzY1ODcyN15BMl5BanBnXkFtZTcwNTE3OTIxOA@@._V1_SX300.jpg",
+                      "Title": "Marvel One-Shot: Item 47",
+                      "Type": "movie",
+                      "Year": "2012",
+                      "imdbID": "tt2247732",
+                    },
+                  ],
+                  "currentPage": 1,
+                  "keyword": "marvel",
+                  "totalNum": "143",
+                  "totalPages": 15,
+                }
+              }
+            >
+              <div
+                className="before-select"
+              >
+                You haven't selected any movie yet!
+              </div>
+            </MovieDetail>
+          </Connect(MovieDetail)>
+        </div>
+      </div>
+    </App>
+  </Provider>
+</_default>
+`;

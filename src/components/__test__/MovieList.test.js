@@ -1,43 +1,41 @@
-import React from "react";
+import React from 'react';
 
-import MovieList from "components/MovieList";
-import { mount, unmount } from "enzyme";
-import RootTest from "RootTest";
+import MovieList from 'components/MovieList';
+import { mount } from 'enzyme';
+import RootTest from 'RootTest';
 
-describe("MovieList", () => {
+describe('MovieList', () => {
   let wrappered;
   const initialState = {
-    searchStatus:{
+    searchStatus: {
       currentMovieList: [
         {
-          imdbID: "id1",
-          Title: "Marvel",
-          Year: "2016"
+          imdbID: 'id1',
+          Title: 'Marvel',
+          Year: '2016',
         },
         {
-          imdbID: "id2",
-          Title: "Spider man",
-          Year: "2016"
-        }
-      ]
-    }
-   
+          imdbID: 'id2',
+          Title: 'Spider man',
+          Year: '2016',
+        },
+      ],
+    },
   };
-  beforeEach(()=>{
+  beforeEach(() => {
     wrappered = mount(
       <RootTest initialState={initialState}>
         <MovieList />
       </RootTest>
     );
-  })
-  afterEach(()=>{
+  });
+  afterEach(() => {
     wrappered.unmount();
-  })
-  it("render 2 movies", () => {
+  });
+  it('render UI', () => {
     expect(wrappered).toMatchSnapshot();
-  })
-  it('render 2 movies', ()=>{
-    expect(wrappered.find(".movieList").find('li').length).toEqual(2)
-   
-  })
+  });
+  it('have 2 movies', () => {
+    expect(wrappered.find('.movieList').find('li').length).toEqual(2);
+  });
 });

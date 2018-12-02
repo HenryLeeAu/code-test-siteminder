@@ -6,8 +6,7 @@ import {
   decreaseCurrentPage,
   increaseCurrentPage,
   fetchMovieList,
-  fetchMovieDetail,
-  
+  fetchMovieDetail
 } from "actions";
 import {
   INPUT_KEYWORD,
@@ -15,6 +14,8 @@ import {
   SHOW_DETAIL,
   UPDATE_CURRENT_PAGE
 } from "actions/types";
+import moxios from "moxios";
+import { baseApi } from "apis";
 
 describe("inputKeyword", () => {
   it("has the correct type", () => {
@@ -62,9 +63,9 @@ describe("updateCurrentPageNum", () => {
 
 describe("decreaseCurrentPage", () => {
   let dispatch;
-  beforeEach(()=>{
-    dispatch = jest.fn() 
-  })
+  beforeEach(() => {
+    dispatch = jest.fn();
+  });
   it("currentPage>1", async () => {
     const getState = function() {
       return {
@@ -91,19 +92,17 @@ describe("decreaseCurrentPage", () => {
   });
 });
 
-
-
 describe("increaseCurrentPage", () => {
   let dispatch;
-  beforeEach(()=>{
-    dispatch = jest.fn() 
-  })
+  beforeEach(() => {
+    dispatch = jest.fn();
+  });
   it("currentPage >= totalPages", async () => {
     const getState = function() {
       return {
         searchStatus: {
           currentPage: 7,
-          totalPages:5,
+          totalPages: 5,
           keyword: "Marvel"
         }
       };
@@ -116,7 +115,7 @@ describe("increaseCurrentPage", () => {
       return {
         searchStatus: {
           currentPage: 2,
-          totalPages:5,
+          totalPages: 5,
           keyword: "Marvel"
         }
       };
@@ -124,5 +123,43 @@ describe("increaseCurrentPage", () => {
     await increaseCurrentPage()(dispatch, getState);
     expect(dispatch).toBeCalledWith(expect.any(Function));
   });
- 
+});
+
+describe("fetchMovieList", () => {
+  let dispatch;
+  beforeEach(() => {
+    dispatch = jest.fn();
+    moxios.install();
+  });
+  afterEach(() => {
+    moxios.uninstall();
+  });
+  it("initial fetch", async () => {
+    moxios.stubRequest(`${baseApi}&s=marvel&page=1`, {
+      status: 200,
+      response: {
+        Search: []
+      }
+    });
+
+    await fetchMovieList("marvel")(dispatch);
+    moxios.wait(() => {
+      expect(dispatch).toBeCalledWith(expect.any(Function));
+    });
+  });
+
+  it("initial fetch", async () => {
+    moxios.stubRequest(`${baseApi}&s=marvsssssel&page=1`, {
+      status: 200,
+      response: {
+        Response: 'False',
+        Error:'no movies'
+      }
+    });
+
+    const result = await fetchMovieList("marvsssssel")(dispatch);
+    moxios.wait(() => {
+      expect(result).toEqual(false)
+    });
+  });
 });

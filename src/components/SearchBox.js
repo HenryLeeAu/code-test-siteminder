@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "actions";
-import _ from "lodash";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from 'actions';
+import _ from 'lodash';
 class SearchBox extends Component {
   state = {
-    value: ""
+    value: '',
   };
   handleChange = e => {
     //console.log(this.props)
-    this.setState({
-      value: e.target.value
-    },()=>{
-      
-      
-    });
+    this.setState(
+      {
+        value: e.target.value,
+      },
+      () => {}
+    );
     this.props.inputKeyword(e.target.value);
-    this.search()
+    this.search();
   };
   search = _.debounce(() => {
-    if(this.state.value.length <= 2) return 
-    this.props.fetchMovieList(this.state.value)
-  }, 500)
+    if (this.state.value.length <= 2) return;
+    this.props.fetchMovieList(this.state.value);
+  }, 500);
   render() {
     return (
       <div className="SearchBox">
@@ -28,6 +28,7 @@ class SearchBox extends Component {
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
+          placeholder="keyword"
         />
       </div>
     );
@@ -35,7 +36,7 @@ class SearchBox extends Component {
 }
 function mapStateToProps(state) {
   return {
-    searchStatus: state.searchStatus
+    searchStatus: state.searchStatus,
   };
 }
 export default connect(
