@@ -19,7 +19,9 @@ See coverage rate of the testing.
 2. Pagination will hide prev or next button when we jump to first/last page.<br>
 3. Pagination will be hidden once the result less than 10 movie.<br>
 4. Clicked movie on the list has a different colour and it will be cached until user clicks another one.<br>
-5. Detail pannel will detact if the poster exists.<br>
+5. Movie list supports scrollbar.<br>
+6. Detail pannel will detact if the poster exists.<br>
+7. Serachbox has a debounce feature which drcreases the request times <br>
 
 
 
