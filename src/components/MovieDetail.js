@@ -15,7 +15,6 @@ function MovieDetail(props) {
       Poster,
       Plot,
     } = currentMovieDetail;
-    console.log(Title);
     return (
       <div>
         <div className="detailLeft">
