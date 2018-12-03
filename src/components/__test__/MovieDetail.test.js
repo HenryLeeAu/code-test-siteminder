@@ -1,63 +1,61 @@
-import React from "react";
-import MovieDetail from "components/MovieDetail";
-import { mount, unmount } from "enzyme";
-import RootTest from "RootTest";
+import React from 'react';
+import MovieDetail from 'components/MovieDetail';
+import { mount } from 'enzyme';
+import Root from 'Root';
 
-
-describe('movieDetail',()=>{
-  it('initial screen',()=>{
+describe('movieDetail', () => {
+  it('initial screen', () => {
     const initialState = {
-      searchStatus:{
-        currentMovieDetail: null
-      }
+      searchStatus: {
+        currentMovieDetail: null,
+      },
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <MovieDetail />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();
-  })
+  });
 
-  it('with detail',()=>{
+  it('with detail', () => {
     const initialState = {
-      searchStatus:{
+      searchStatus: {
         currentMovieDetail: {
-          Title: "Marvel",
-          Genre: "Comedy, Horrible",
-          Language: "English",
-          Director: "Henry Lee",
-          Actors: "Actor1, Actor2, Actor3",
+          Title: 'Marvel',
+          Genre: 'Comedy, Horrible',
+          Language: 'English',
+          Director: 'Henry Lee',
+          Actors: 'Actor1, Actor2, Actor3',
           Runtime: '45mins',
-          Poster: 'abc.jpg'
-        }
-      }
-     
+          Poster: 'abc.jpg',
+        },
+      },
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <MovieDetail />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();
-  })
-  
-  it('no poster',()=>{
+  });
+
+  it('no poster', () => {
     const initialState = {
-      searchStatus:{
+      searchStatus: {
         currentMovieDetail: {
-          Poster: 'N/A'
-        }
-      }
+          Poster: 'N/A',
+        },
+      },
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <MovieDetail />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();
-  })
-})
+  });
+});

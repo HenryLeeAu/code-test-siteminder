@@ -7,7 +7,6 @@ class SearchBox extends Component {
     value: '',
   };
   handleChange = e => {
-    //console.log(this.props)
     this.setState(
       {
         value: e.target.value,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import MovieList from 'components/MovieList';
 import { mount } from 'enzyme';
-import RootTest from 'RootTest';
+import Root from 'Root';
 
 describe('MovieList', () => {
   let wrappered;
@@ -24,9 +24,9 @@ describe('MovieList', () => {
   };
   beforeEach(() => {
     wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <MovieList />
-      </RootTest>
+      </Root>
     );
   });
   afterEach(() => {
@@ -35,7 +35,7 @@ describe('MovieList', () => {
   it('render UI', () => {
     expect(wrappered).toMatchSnapshot();
   });
-  it('have 2 movies', () => {
-    expect(wrappered.find('.movieList').find('li').length).toEqual(2);
+  it('has 2 movies', () => {
+    expect(wrappered.find('.movieList').find('li').length).toBe(2);
   });
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import moxios from 'moxios';
-import RootTest from 'RootTest';
+import Root from 'Root';
 import App from 'components/App';
 import { baseApi } from 'apis';
 import { defaultState } from 'reducers/searchStatus';
@@ -66,9 +66,9 @@ describe('Intergation', () => {
       searchStatus: defaultState,
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <App />
-      </RootTest>
+      </Root>
     );
 
     wrappered.find('input').simulate('change', {
@@ -121,9 +121,9 @@ describe('Intergation', () => {
       },
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <App />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
 

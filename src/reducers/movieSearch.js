@@ -2,7 +2,6 @@ import {
   INPUT_KEYWORD,
   GET_LIST,
   SHOW_DETAIL,
-  RECOVER_DETAIL,
 } from 'actions/types';
 
 const defaultState = {
@@ -32,11 +31,6 @@ export default function(state = defaultState, action) {
         ...state,
         currentMovieDetail: action.payload.data,
         fetchedMovies: [...state.fetchedMovies, action.payload.data],
-      };
-    case RECOVER_DETAIL:
-      return {
-        ...state,
-        currentMovieDetail: action.payload.matchedMovie,
       };
     default:
       return state;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Pagination from 'components/Pagination';
 import { mount } from 'enzyme';
-import RootTest from 'RootTest';
+import Root from 'Root';
 describe('Pagination', () => {
   it('more than 1 pages', () => {
     const initialState = {
@@ -13,9 +13,9 @@ describe('Pagination', () => {
       },
     };
     const wrappered = mount(
-      <RootTest initialState={initialState}>
+      <Root initialState={initialState}>
         <Pagination />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();
@@ -29,9 +29,9 @@ describe('Pagination', () => {
       },
     };
     const wrappered = mount(
-      <RootTest>
+      <Root>
         <Pagination initialState={initialState} />
-      </RootTest>
+      </Root>
     );
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();

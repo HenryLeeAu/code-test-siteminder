@@ -8,7 +8,6 @@ class Pagination extends Component {
   handleClickIncreasment = e => {
     this.props.increaseCurrentPage();
   };
-
   renderPagination() {
     const { currentPage, totalPages, totalNum } = this.props.searchStatus;
     if (totalPages !== null && totalPages > 1) {
