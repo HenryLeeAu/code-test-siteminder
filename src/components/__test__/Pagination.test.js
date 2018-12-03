@@ -3,13 +3,6 @@ import React from "react";
 import Pagination from "components/Pagination";
 import { mount, unmount } from "enzyme";
 import RootTest from "RootTest";
-
-
-
-
-
-
-
 describe("Pagination", () => {
   it("more than 1 pages", () => {
     const initialState = {

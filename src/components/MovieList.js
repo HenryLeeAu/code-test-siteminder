@@ -8,13 +8,14 @@ class MovieList extends Component {
   }
   renderList() {
     return this.props.searchStatus.currentMovieList.map((movie, index) => {
+      const { imdbID, Title, Year } = movie;
       return (
         <MovieListItem
-          key={`${movie.imdbID}${movie.Title}`}
-          onClick={e => this.handleClickList(movie.imdbID)}
-          title={movie.Title}
-          year={movie.Year}
-          clicked={movie.imdbID === this.props.searchStatus.currentId}
+          key={`${imdbID}${Title}`}
+          onClick={e => this.handleClickList(imdbID)}
+          title={Title}
+          year={Year}
+          clicked={imdbID === this.props.searchStatus.currentId}
         />
       );
     });
