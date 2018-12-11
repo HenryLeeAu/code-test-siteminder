@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Intergation click move to show detail 1`] = `
+exports[`Intergation click movie to show detail 1`] = `
 <_default
   initialState={
     Object {
@@ -70,8 +70,9 @@ exports[`Intergation click move to show detail 1`] = `
                 className="SearchBox"
               >
                 <input
+                  aria-label="Search"
                   onChange={[Function]}
-                  placeholder="keyword"
+                  placeholder="Input your keyword"
                   type="text"
                   value=""
                 />
@@ -106,14 +107,13 @@ exports[`Intergation click move to show detail 1`] = `
                 >
                   <_default
                     clicked={false}
-                    key="tt2247732Marvel"
+                    key="tt2247732Marvel0"
                     onClick={[Function]}
                     title="Marvel"
                     year="2016"
                   >
                     <li
                       className=""
-                      name="1"
                       onClick={[Function]}
                     >
                       <div>
@@ -190,7 +190,7 @@ exports[`Intergation click move to show detail 1`] = `
 </_default>
 `;
 
-exports[`Intergation click move to show detail 2`] = `
+exports[`Intergation click movie to show detail 2`] = `
 <_default
   initialState={
     Object {
@@ -288,8 +288,9 @@ exports[`Intergation click move to show detail 2`] = `
                 className="SearchBox"
               >
                 <input
+                  aria-label="Search"
                   onChange={[Function]}
-                  placeholder="keyword"
+                  placeholder="Input your keyword"
                   type="text"
                   value=""
                 />
@@ -352,14 +353,13 @@ exports[`Intergation click move to show detail 2`] = `
                 >
                   <_default
                     clicked={false}
-                    key="tt2247732Marvel"
+                    key="tt2247732Marvel0"
                     onClick={[Function]}
                     title="Marvel"
                     year="2016"
                   >
                     <li
                       className=""
-                      name="1"
                       onClick={[Function]}
                     >
                       <div>
@@ -603,8 +603,9 @@ exports[`Intergation keyin to search list 1`] = `
                 className="SearchBox"
               >
                 <input
+                  aria-label="Search"
                   onChange={[Function]}
-                  placeholder="keyword"
+                  placeholder="Input your keyword"
                   type="text"
                   value="marvel"
                 />
@@ -642,14 +643,13 @@ exports[`Intergation keyin to search list 1`] = `
                 >
                   <_default
                     clicked={false}
-                    key="tt2247732Marvel One-Shot: Item 47"
+                    key="tt2247732Marvel One-Shot: Item 470"
                     onClick={[Function]}
                     title="Marvel One-Shot: Item 47"
                     year="2012"
                   >
                     <li
                       className=""
-                      name="1"
                       onClick={[Function]}
                     >
                       <div>

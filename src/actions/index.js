@@ -12,12 +12,14 @@ export function inputKeyword(keyword) {
     payload: keyword,
   };
 }
+
 export const getList = data => {
   return {
     type: GET_LIST,
     payload: data,
   };
 };
+
 export const fetchMovieList = (keyword, page) => {
   const fetchPage = typeof page === 'number' && page > 0 ? page : 1;
   return dispatch => {
@@ -32,9 +34,15 @@ export const fetchMovieList = (keyword, page) => {
           dispatch(getList({ data, fetchPage }));
         }
       })
-      .catch(error => {});
+      .catch(error => {
+        console.error(error)
+      
+        
+
+      });
   };
 };
+
 export const showMovieDetail = data => {
   return {
     type: SHOW_DETAIL,
@@ -55,12 +63,14 @@ export const fetchMovieDetail = id => {
       });
   };
 };
+
 export const updateCurrentPageNum = num => {
   return {
     type: UPDATE_CURRENT_PAGE,
     payload: num,
   };
 };
+
 export const increaseCurrentPage = () => {
   return (dispatch, getState) => {
     const { currentPage, totalPages, keyword } = getState().searchStatus;

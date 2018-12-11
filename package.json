@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.12",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "moxios": "^0.4.0",
@@ -12,7 +16,8 @@
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
     "redux-promise": "^0.6.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +35,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/react-redux": "^6.0.10",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",

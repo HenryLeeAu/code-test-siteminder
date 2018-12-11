@@ -20,6 +20,7 @@ describe('Pagination', () => {
     expect(wrappered).toMatchSnapshot();
     wrappered.unmount();
   });
+  
   it('less than 1 page', () => {
     const initialState = {
       searchStatus: {

@@ -7,12 +7,9 @@ class SearchBox extends Component {
     value: '',
   };
   handleChange = e => {
-    this.setState(
-      {
-        value: e.target.value,
-      },
-      () => {}
-    );
+    this.setState({
+      value: e.target.value,
+    });
     this.props.inputKeyword(e.target.value);
     this.search();
   };
@@ -27,7 +24,8 @@ class SearchBox extends Component {
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
-          placeholder="keyword"
+          placeholder="Input your keyword"
+          aria-label="Search"
         />
       </div>
     );

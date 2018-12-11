@@ -28,10 +28,11 @@ export default function(state = defaultState, action) {
         totalNum: action.payload.data.totalResults,
       };
     case SHOW_DETAIL:
+    const { data } = action.payload
       return {
         ...state,
-        currentId: action.payload.data.imdbID,
-        currentMovieDetail: action.payload.data,
+        currentId: data.imdbID,
+        currentMovieDetail: data,
       };
 
     case UPDATE_CURRENT_PAGE:

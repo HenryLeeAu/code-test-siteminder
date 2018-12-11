@@ -85,7 +85,7 @@ describe('Intergation', () => {
     }, 1000);
   });
 
-  it('click move to show detail', done => {
+  it('click movie to show detail', done => {
     moxios.install();
     moxios.stubRequest(`${baseApi}&s=marvel&page=1`, {
       status: 200,

@@ -41,8 +41,9 @@ exports[`Searchbox render each component 1`] = `
           className="SearchBox"
         >
           <input
+            aria-label="Search"
             onChange={[Function]}
-            placeholder="keyword"
+            placeholder="Input your keyword"
             type="text"
             value=""
           />

@@ -1,8 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function MovieDetail(props) {
-  const { currentMovieDetail } = props.searchStatus;
+interface IProps {
+  currentMovieDetail: {
+    Title: string;
+    Year: string;
+    Genre: string;
+    Language: string;
+    Director: string;
+    Actors: string;
+    Runtime: string;
+    Poster: string;
+    Plot: string;
+  };
+}
+function MovieDetail({searchStatus}:{searchStatus:IProps}) {
+  const { currentMovieDetail } = searchStatus;
   if (currentMovieDetail !== null) {
     const {
       Title,
@@ -37,7 +50,8 @@ function MovieDetail(props) {
     );
   }
 }
-function mapStateToProps(state) {
+
+function mapStateToProps(state: any) {
   return {
     searchStatus: state.searchStatus,
   };

@@ -57,14 +57,13 @@ exports[`MovieList render UI 1`] = `
         >
           <_default
             clicked={false}
-            key="id1Marvel"
+            key="id1Marvel0"
             onClick={[Function]}
             title="Marvel"
             year="2016"
           >
             <li
               className=""
-              name="1"
               onClick={[Function]}
             >
               <div>
@@ -79,14 +78,13 @@ exports[`MovieList render UI 1`] = `
           </_default>
           <_default
             clicked={false}
-            key="id2Spider man"
+            key="id2Spider man1"
             onClick={[Function]}
             title="Spider man"
             year="2016"
           >
             <li
               className=""
-              name="1"
               onClick={[Function]}
             >
               <div>
